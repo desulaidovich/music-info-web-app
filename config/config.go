@@ -25,14 +25,6 @@ type (
 )
 
 func NewConfigFrom() (*Config, error) {
-	// path, err := os.Getwd()
-
-	// if err != nil {
-	// 	return nil, err
-	// }
-
-	// fmt.Println("PATH TO ENV", path+"/config/.env")
-
 	envs, err := godotenv.Read("./.env")
 	if err != nil {
 		return nil, err
