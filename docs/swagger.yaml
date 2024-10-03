@@ -1,0 +1,243 @@
+basePath: /
+definitions:
+  domain.Song:
+    properties:
+      group:
+        type: string
+      song:
+        type: string
+      songID:
+        type: integer
+    type: object
+  domain.SongDetail:
+    properties:
+      group:
+        type: string
+      link:
+        type: string
+      releaseDate:
+        type: string
+      song:
+        type: string
+      songID:
+        type: integer
+      sourceText:
+        items:
+          $ref: '#/definitions/domain.SongDetailText'
+        type: array
+      text:
+        type: string
+    type: object
+  domain.SongDetailText:
+    properties:
+      chorus:
+        type: string
+      verse:
+        type: string
+    type: object
+  handler.response:
+    properties:
+      count:
+        type: integer
+      songs:
+        items:
+          $ref: '#/definitions/models.Song'
+        type: array
+    type: object
+  models.Song:
+    properties:
+      group:
+        type: string
+      id:
+        type: integer
+      link:
+        type: string
+      releaseDate:
+        type: string
+      song:
+        type: string
+      text:
+        type: string
+    type: object
+host: localhost:8080
+info:
+  contact: {}
+  title: Music Info
+  version: 0.0.1
+paths:
+  /:
+    get:
+      consumes:
+      - application/json
+      description: Все данные библиотеки
+      operationId: get-all-songs
+      parameters:
+      - description: Кол-во записей
+        in: query
+        name: count
+        required: true
+        type: integer
+      - description: Смещение по записям
+        in: query
+        name: offset
+        required: true
+        type: integer
+      - description: Фильтрация
+        in: body
+        name: input
+        schema:
+          $ref: '#/definitions/domain.SongDetail'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Без некоторых данных
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.response'
+            - properties:
+                Songs:
+                  $ref: '#/definitions/models.Song'
+              type: object
+        "400":
+          description: Bad request
+          schema:
+            type: string
+        "500":
+          description: Internal error
+          schema:
+            type: string
+      summary: Все данные библиотеки
+      tags:
+      - API для музыкальной библиотеки
+  /add:
+    post:
+      consumes:
+      - application/json
+      description: Запрос на добавление новой песни
+      operationId: add-new-song
+      parameters:
+      - description: Данные по песне
+        in: body
+        name: input
+        required: true
+        schema:
+          $ref: '#/definitions/domain.SongDetail'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: ИД
+          schema:
+            $ref: '#/definitions/domain.Song'
+        "400":
+          description: Bad request
+          schema:
+            type: string
+        "500":
+          description: Internal error
+          schema:
+            type: string
+      summary: Запрос на добавление новой песни
+      tags:
+      - API для музыкальной библиотеки
+  /delete:
+    delete:
+      consumes:
+      - application/json
+      description: Запрос на удаление песни
+      operationId: delete-song
+      parameters:
+      - description: ИД
+        in: query
+        name: songID
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Без некоторых данных
+          schema:
+            $ref: '#/definitions/domain.Song'
+        "400":
+          description: Bad request
+          schema:
+            type: string
+        "500":
+          description: Internal error
+          schema:
+            type: string
+      summary: Запрос на удаление песни
+      tags:
+      - API для музыкальной библиотеки
+  /info:
+    get:
+      consumes:
+      - application/json
+      description: Получить данные по песне
+      operationId: get-song-info
+      parameters:
+      - description: Номер куплета от 1. Пусто - все куплеты
+        in: query
+        name: verse
+        type: integer
+      - description: Название группы
+        in: query
+        name: group
+        required: true
+        type: string
+      - description: Название песни
+        in: query
+        name: song
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Данные
+          schema:
+            $ref: '#/definitions/domain.SongDetail'
+        "400":
+          description: Bad request
+          schema:
+            type: string
+        "500":
+          description: Internal error
+          schema:
+            type: string
+      summary: Получить данные по песне
+      tags:
+      - API для музыкальной библиотеки
+  /update:
+    put:
+      consumes:
+      - application/json
+      description: Обновить данные песни
+      operationId: update-song-info
+      parameters:
+      - description: ИД песни
+        in: query
+        name: songID
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Данные
+          schema:
+            $ref: '#/definitions/domain.SongDetail'
+        "400":
+          description: Bad request
+          schema:
+            type: string
+        "500":
+          description: Internal error
+          schema:
+            type: string
+      summary: Обновить данные песни
+      tags:
+      - API для музыкальной библиотеки
+swagger: "2.0"

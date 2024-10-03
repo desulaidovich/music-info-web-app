@@ -1,0 +1,86 @@
+Date : 2024-10-03 15:14:08
+Directory : c:\Users\desul\Desktop\Тестовое задание
+Total : 35 files,  2593 codes, 87 comments, 296 blanks, all 2976 lines
+
+Languages
++------------------+------------+------------+------------+------------+------------+
+| language         | files      | code       | comment    | blank      | total      |
++------------------+------------+------------+------------+------------+------------+
+| Go               |         26 |      1,603 |         81 |        279 |      1,963 |
+| JSON             |          2 |        517 |          0 |          0 |        517 |
+| YAML             |          2 |        278 |          0 |          5 |        283 |
+| Go Checksum File |          1 |        135 |          0 |          1 |        136 |
+| Go Module File   |          1 |         42 |          0 |          5 |         47 |
+| MS SQL           |          1 |          9 |          6 |          2 |         17 |
+| Markdown         |          1 |          6 |          0 |          3 |          9 |
+| Properties       |          1 |          3 |          0 |          1 |          4 |
++------------------+------------+------------+------------+------------+------------+
+
+Directories
++------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                               | files      | code       | comment    | blank      | total      |
++------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                  |         35 |      2,593 |         87 |        296 |      2,976 |
+| . (Files)                                                                          |          6 |        366 |          0 |         14 |        380 |
+| app                                                                                |          1 |         78 |          0 |         21 |         99 |
+| cmd                                                                                |          1 |         31 |          5 |         13 |         49 |
+| cmd\app                                                                            |          1 |         31 |          5 |         13 |         49 |
+| config                                                                             |          2 |         69 |          0 |         11 |         80 |
+| docs                                                                               |          3 |      1,006 |          2 |          6 |      1,014 |
+| internal                                                                           |          2 |         56 |          0 |         18 |         74 |
+| internal\logger                                                                    |          1 |         21 |          0 |          6 |         27 |
+| internal\render                                                                    |          1 |         35 |          0 |         12 |         47 |
+| middleware                                                                         |          1 |         28 |          0 |         11 |         39 |
+| migrations                                                                         |          1 |          9 |          6 |          2 |         17 |
+| v1                                                                                 |         18 |        950 |         74 |        200 |      1,224 |
+| v1 (Files)                                                                         |          3 |         34 |          1 |         10 |         45 |
+| v1\controller                                                                      |          5 |        351 |         59 |         76 |        486 |
+| v1\controller\handler                                                              |          5 |        351 |         59 |         76 |        486 |
+| v1\domain                                                                          |          1 |         21 |          0 |          4 |         25 |
+| v1\mocks                                                                           |          1 |        104 |          9 |         30 |        143 |
+| v1\models                                                                          |          1 |          9 |          5 |          3 |         17 |
+| v1\repository                                                                      |          1 |         88 |          0 |         20 |        108 |
+| v1\usecase                                                                         |          6 |        343 |          0 |         57 |        400 |
++------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++------------------------------------------------------------------------------------+------------------+------------+------------+------------+------------+
+| filename                                                                           | language         | code       | comment    | blank      | total      |
++------------------------------------------------------------------------------------+------------------+------------+------------+------------+------------+
+| c:\Users\desul\Desktop\Тестовое задание\.env                                       | Properties       |          3 |          0 |          1 |          4 |
+| c:\Users\desul\Desktop\Тестовое задание\README.md                                  | Markdown         |          6 |          0 |          3 |          9 |
+| c:\Users\desul\Desktop\Тестовое задание\app\app.go                                 | Go               |         78 |          0 |         21 |         99 |
+| c:\Users\desul\Desktop\Тестовое задание\cmd\app\main.go                            | Go               |         31 |          5 |         13 |         49 |
+| c:\Users\desul\Desktop\Тестовое задание\config\config.go                           | Go               |         37 |          0 |          8 |         45 |
+| c:\Users\desul\Desktop\Тестовое задание\config\config_test.go                      | Go               |         32 |          0 |          3 |         35 |
+| c:\Users\desul\Desktop\Тестовое задание\docker-compose.yml                         | YAML             |         35 |          0 |          4 |         39 |
+| c:\Users\desul\Desktop\Тестовое задание\docs\docs.go                               | Go               |        391 |          2 |          5 |        398 |
+| c:\Users\desul\Desktop\Тестовое задание\docs\swagger.json                          | JSON             |        372 |          0 |          0 |        372 |
+| c:\Users\desul\Desktop\Тестовое задание\docs\swagger.yaml                          | YAML             |        243 |          0 |          1 |        244 |
+| c:\Users\desul\Desktop\Тестовое задание\go.mod                                     | Go Module File   |         42 |          0 |          5 |         47 |
+| c:\Users\desul\Desktop\Тестовое задание\go.sum                                     | Go Checksum File |        135 |          0 |          1 |        136 |
+| c:\Users\desul\Desktop\Тестовое задание\internal\logger\logger.go                  | Go               |         21 |          0 |          6 |         27 |
+| c:\Users\desul\Desktop\Тестовое задание\internal\render\render.go                  | Go               |         35 |          0 |         12 |         47 |
+| c:\Users\desul\Desktop\Тестовое задание\middleware\middleware.go                   | Go               |         28 |          0 |         11 |         39 |
+| c:\Users\desul\Desktop\Тестовое задание\migrations\20240920134653_create_table.sql | MS SQL           |          9 |          6 |          2 |         17 |
+| c:\Users\desul\Desktop\Тестовое задание\thunder-music-info.json                    | JSON             |        145 |          0 |          0 |        145 |
+| c:\Users\desul\Desktop\Тестовое задание\v1\controller\handler\add.go               | Go               |         59 |         11 |         14 |         84 |
+| c:\Users\desul\Desktop\Тестовое задание\v1\controller\handler\delete.go            | Go               |         71 |         11 |         15 |         97 |
+| c:\Users\desul\Desktop\Тестовое задание\v1\controller\handler\get.go               | Go               |         69 |         13 |         16 |         98 |
+| c:\Users\desul\Desktop\Тестовое задание\v1\controller\handler\get_all.go           | Go               |         77 |         13 |         15 |        105 |
+| c:\Users\desul\Desktop\Тестовое задание\v1\controller\handler\update.go            | Go               |         75 |         11 |         16 |        102 |
+| c:\Users\desul\Desktop\Тестовое задание\v1\domain\domain.go                        | Go               |         21 |          0 |          4 |         25 |
+| c:\Users\desul\Desktop\Тестовое задание\v1\mocks\Repository.go                     | Go               |        104 |          9 |         30 |        143 |
+| c:\Users\desul\Desktop\Тестовое задание\v1\models\models.go                        | Go               |          9 |          5 |          3 |         17 |
+| c:\Users\desul\Desktop\Тестовое задание\v1\repository.go                           | Go               |          9 |          1 |          3 |         13 |
+| c:\Users\desul\Desktop\Тестовое задание\v1\repository\postgres.go                  | Go               |         88 |          0 |         20 |        108 |
+| c:\Users\desul\Desktop\Тестовое задание\v1\routes.go                               | Go               |         13 |          0 |          4 |         17 |
+| c:\Users\desul\Desktop\Тестовое задание\v1\usecase.go                              | Go               |         12 |          0 |          3 |         15 |
+| c:\Users\desul\Desktop\Тестовое задание\v1\usecase\usecase.go                      | Go               |        108 |          0 |         28 |        136 |
+| c:\Users\desul\Desktop\Тестовое задание\v1\usecase\usecase_add_test.go             | Go               |         49 |          0 |          6 |         55 |
+| c:\Users\desul\Desktop\Тестовое задание\v1\usecase\usecase_delete_test.go          | Go               |         39 |          0 |          5 |         44 |
+| c:\Users\desul\Desktop\Тестовое задание\v1\usecase\usecase_get_all_test.go         | Go               |         52 |          0 |          6 |         58 |
+| c:\Users\desul\Desktop\Тестовое задание\v1\usecase\usecase_get_test.go             | Go               |         50 |          0 |          6 |         56 |
+| c:\Users\desul\Desktop\Тестовое задание\v1\usecase\usecase_update_test.go          | Go               |         45 |          0 |          6 |         51 |
+| Total                                                                              |                  |      2,593 |         87 |        296 |      2,976 |
++------------------------------------------------------------------------------------+------------------+------------+------------+------------+------------+

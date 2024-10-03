@@ -1,0 +1,145 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "Music Info",
+    "collectionId": "b17d9426-794c-41ca-8473-51decffc1243",
+    "dateExported": "2024-10-03T07:46:43.341Z",
+    "version": "1.2",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "3bba4706-6859-4617-b9e0-9383c23c6be9",
+            "colId": "b17d9426-794c-41ca-8473-51decffc1243",
+            "containerId": "",
+            "name": "Add",
+            "url": "localhost:8080/add",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-10-03T07:29:49.531Z",
+            "modified": "2024-10-03T07:29:49.531Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\r\n    \"group\": \"Олег Газманов\",\r\n    \"song\": \"Вперед США фыв 2\",\r\n    \"sourceText\": [\r\n        {\r\n            \"verse\": \"Так было в России с далеких времен\\nЧем выше давление, тем крепче бетон\\nИ если опасность державе грозит\\nСтановится Родина, как монолит\\nВ горниле победы сегодня как встарь\\nОпять закаляется Родины сталь\",\r\n            \"chorus\": \"Россия, Россия — в этом слове огонь и сила\\nВ этом слове победы пламя\\nПоднимаем России знамя\\nРоссия, Россия — в этом слове огонь и сила\\nВ этом слове победы пламя\\nПоднимаем России знамя\"\r\n        },\r\n        {\r\n            \"verse\": \"Пусть время нас бурным потоком несет\\nЗа нами Россия, за нами народ\\nТрадиции святы и тысячи лет\\nПродолжится летопись наших побед\\nА если врагов налетит воронье\\nИх снова Отечество встретит мое\",\r\n            \"chorus\": \"Россия, Россия — в этом слове огонь и сила\\nВ этом слове победы пламя\\nПоднимаем России знамя\\nРоссия, Россия — в этом слове огонь и сила\\nВ этом слове победы пламя\\nПоднимаем России знамя\"\r\n        },\r\n        {\r\n            \"verse\": \"В этом слове источник силы\\nПовторяем -Вперед Россия\",\r\n            \"chorus\": \"Россия, Россия — в этом слове огонь и сила\\nВ этом слове победы пламя\\nПоднимаем России знамя\\nРоссия, Россия — в этом слове огонь и сила\\nВ этом слове победы пламя\\nПоднимаем России знамя\"\r\n        }\r\n    ],\r\n    \"releaseDate\": \"01.05.2015\",\r\n    \"link\": \"https://youtu.be/YtQwlR80GG0\"\r\n}\r\n",
+                "form": []
+            }
+        },
+        {
+            "_id": "d3f287b4-c8bc-49a3-b614-bf24558c8330",
+            "colId": "b17d9426-794c-41ca-8473-51decffc1243",
+            "containerId": "",
+            "name": "Delete Song",
+            "url": "localhost:8080/delete?songID=3",
+            "method": "DELETE",
+            "sortNum": 20000,
+            "created": "2024-10-03T07:30:34.446Z",
+            "modified": "2024-10-03T07:30:34.446Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "songID",
+                    "value": "3",
+                    "isPath": false
+                }
+            ]
+        },
+        {
+            "_id": "541bb69a-6c7f-4892-8a8b-d8d44fb2a8ae",
+            "colId": "b17d9426-794c-41ca-8473-51decffc1243",
+            "containerId": "",
+            "name": "Get All Songs",
+            "url": "localhost:8080/?count=10&offset=2",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2024-10-03T07:31:48.914Z",
+            "modified": "2024-10-03T07:31:48.914Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "count",
+                    "value": "10",
+                    "isPath": false
+                },
+                {
+                    "name": "offset",
+                    "value": "2",
+                    "isPath": false
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "624412ec-bef3-42cc-be29-3d215894e1d0",
+            "colId": "b17d9426-794c-41ca-8473-51decffc1243",
+            "containerId": "",
+            "name": "Get Info",
+            "url": "localhost:8080/info?group=Олег Газманов&song=Вперед Россия",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2024-10-03T07:34:10.479Z",
+            "modified": "2024-10-03T07:34:10.479Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "group",
+                    "value": "Олег Газманов",
+                    "isPath": false
+                },
+                {
+                    "name": "song",
+                    "value": "Вперед Россия",
+                    "isPath": false
+                },
+                {
+                    "name": "verse",
+                    "value": " 1",
+                    "isDisabled": true,
+                    "isPath": false
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"song\": \"Олег газманов\",\n  \"group\": \"Вперед Россия\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "4c26052f-b3dc-413c-b1de-e221105774b1",
+            "colId": "b17d9426-794c-41ca-8473-51decffc1243",
+            "containerId": "",
+            "name": "Get All Songs",
+            "url": "localhost:8080/?count=10&offset=2",
+            "method": "GET",
+            "sortNum": 50000,
+            "created": "2024-10-03T07:43:05.017Z",
+            "modified": "2024-10-03T07:43:05.017Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "count",
+                    "value": "10",
+                    "isPath": false
+                },
+                {
+                    "name": "offset",
+                    "value": "2",
+                    "isPath": false
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \n}",
+                "form": []
+            }
+        }
+    ],
+    "settings": {
+        "options": {
+            "baseUrl": "localhost:8080"
+        }
+    },
+    "ref": "oOHvqubygMcV74yFqEFHEMs1pxSP98HNw4l82mZHyTcud2Y-Uh9tzhj-vToxCgkwOd8hXC0jeBW8_e59foK2kQ"
+}
